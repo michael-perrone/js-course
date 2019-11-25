@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css" />
+  </head>
+  <body>
+    <div id="mainContainerCalculator">
+      <div id="screenContainer">
+        <p id="numberOnScreen">0</p>
+      </div>
+      <div id="buttonContainer">
+        <div class="buttonRow">
+          <button onclick="getNumber(1)" class="calcButton">1</button>
+          <button onclick="getNumber(2)" class="calcButton">2</button>
+          <button onclick="getNumber(3)" class="calcButton">3</button>
+        </div>
+        <div class="buttonRow">
+          <button onclick="getNumber(4)" class="calcButton">4</button>
+          <button onclick="getNumber(5)" class="calcButton">5</button>
+          <button onclick="getNumber(6)" class="calcButton">6</button>
+        </div>
+        <div class="buttonRow">
+          <button onclick="getNumber(7)" class="calcButton">7</button>
+          <button onclick="getNumber(8)" class="calcButton">8</button>
+          <button onclick="getNumber(9)" class="calcButton">9</button>
+        </div>
+        <div class="buttonRow">
+          <button onclick="getOperand('+')" class="calcButton">+</button>
+          <button onclick="getOperand('-')" class="calcButton">-</button>
+          <button onclick="getOperand('*')" class="calcButton">*</button>
+        </div>
+        <div class="buttonRow">
+          <button onclick="getOperand('/')" class="calcButton">/</button>
+          <button onclick="doCalculation()" class="calcButton">=</button>
+          <button onclick="clearAll()" class="calcButton">Clear</button>
+        </div>
+      </div>
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>
