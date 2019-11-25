@@ -59,6 +59,9 @@ function getOperand(operator) {
 // we cant do real calculations with strings
 
 function doCalculation() {
+  if (secondNumEntered === false && secondNum !== undefined) {
+    secondNumEntered = true;
+  }
   if (
     firstNum !== undefined &&
     secondNum !== undefined &&
@@ -79,7 +82,7 @@ function doCalculation() {
     }
   } else if (result !== undefined) {
     if (operatorChosen === "+") {
-      result = result + numAfterResult;
+      result = parseInt(result) + parseInt(numAfterResult);
       numberOnScreen.innerText = result;
     } else if (operatorChosen === "-") {
       result = result - numAfterResult;
@@ -91,6 +94,8 @@ function doCalculation() {
       result = result / numAfterResult;
       numberOnScreen.innerText = result;
     }
+    numAfterResult = undefined;
+    console.log(numAfterResult);
   }
 }
 
