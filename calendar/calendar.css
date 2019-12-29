@@ -1,0 +1,46 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+i {
+  font-size: 22px;
+}
+
+.month-year {
+  display: inline;
+  font-size: 18px;
+}
+
+#calendar-container {
+  border: 1px solid black;
+  height: 400px;
+  width: 320px;
+  margin-top: 100px;
+  margin-left: 200px;
+}
+
+#calendar-header {
+  display: flex;
+  justify-content: space-around;
+}
+
+#days-header {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#days {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-around;
+  left: 3px;
+}
+
+#day-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
