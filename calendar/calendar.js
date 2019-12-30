@@ -11,6 +11,11 @@ let ourDate = new Date();
 
 console.log(ourDate.getMonth());
 
+function getDate(day) {
+  let dateToDisplay = document.getElementById("display");
+  dateToDisplay.innerText = monthChosen + " " + day + " " + year;
+}
+
 // 0 1 2 3 4 5 6 7 8 9 10 11
 
 function getDaysOfMonth(year, month) {
@@ -50,7 +55,11 @@ function render(getDays, newYear, newMonth) {
 
   if (daysInMonth === undefined) {
     daysInMonth = getDays(year, month + 1);
+  } else {
+    daysInMonth = getDays;
   }
+
+  console.log(daysInMonth);
   let firstDayInMonth = new Date(monthChosen + " 1, " + year).getDay();
   if (document.getElementById("0").children.length > 0) {
     for (let lastIndex = 0; lastIndex < 7; lastIndex++) {
@@ -72,6 +81,9 @@ function render(getDays, newYear, newMonth) {
     let dayText = document.createTextNode(i.toString());
     pTag.appendChild(dayText);
     let date = monthChosen + " " + i + "," + " " + year;
+    pTag.addEventListener("click", function() {
+      return getDate(i.toString());
+    });
     let dayOfWeek = new Date(date).getDay();
     let dayHolder = document.getElementById(dayOfWeek.toString());
     dayHolder.appendChild(pTag);
@@ -100,7 +112,7 @@ function changeMonth(addOrMinus) {
   } else {
     if (month - 1 !== -1) {
       month -= 1;
-      render(getDaysOfMonth(year, month - 1), year, month - 1);
+      render(getDaysOfMonth(year, month), year, month);
     } else {
       month = 11;
       render(getDaysOfMonth(year, month), year, month);
