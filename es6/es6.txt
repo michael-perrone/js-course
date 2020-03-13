@@ -1,0 +1,13 @@
+es6 was created in 2015
+es stands for ecmascript
+es6 was the 6th addition to javascript
+ecmascript and javascript are the same thing
+es6 brought a lot of features that you will commonly in codebases today
+arrow functions
+template strings
+destructuring
+rest and spread
+let and const
+default parameters
+promises
+classes

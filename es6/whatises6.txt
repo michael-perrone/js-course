@@ -1,0 +1,7 @@
+es6 was an addition to javascript in 2015
+
+javascript also is known as ecmascript
+
+es stands for ecmascript, so es6 was ecmascript version 6
+
+syntax of things made a bit easier, and some other beneficial
